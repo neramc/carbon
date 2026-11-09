@@ -1,0 +1,297 @@
+{
+  "$description": "CARBON Soft Black theme (Dark). Same token paths as the Soft White theme; neither theme is secondary.",
+  "color": {
+    "$type": "color",
+    "background": {"$value": "{color.soft-black.076}", "$description": "D0 Foundation fill."},
+    "surface": {"$value": "{color.soft-black.115}", "$description": "D1 Integrated and D2 Raised fill."},
+    "surface-secondary": {
+      "$value": "{color.soft-black.145}",
+      "$description": "Secondary regions within a Surface (headers, grouped areas). Not an elevation level."
+    },
+    "surface-elevated": {"$value": "{color.soft-black.182}", "$description": "D3 Floating and D4 Elevated fill; selected raised tiles."},
+    "surface-inset": {"$value": "{color.soft-black.058}", "$description": "Recessed regions: input wells, tracks."},
+    "border": {"$value": "{color.soft-black.232}", "$description": "Structural edges and dividers (decorative; below 3:1)."},
+    "border-strong": {"$value": "{color.soft-black.328}", "$description": "Emphasized structural edges (decorative; below 3:1)."},
+    "text-primary": {"$value": "{color.soft-black.933}", "$description": "Primary text and icons."},
+    "text-secondary": {"$value": "{color.soft-black.724}", "$description": "Secondary text."},
+    "text-tertiary": {"$value": "{color.soft-black.571}", "$description": "Non-essential text, disabled text, decorative glyphs."},
+    "success": {
+      "$value": "{color.green.720}",
+      "$description": "Success state: icons, indicators, fills, and text on Surface and Surface Elevated."
+    },
+    "warning": {
+      "$value": "{color.amber.772}",
+      "$description": "Warning state: icons, indicators, fills, and text on Surface and Surface Elevated."
+    },
+    "error": {
+      "$value": "{color.red.643}",
+      "$description": "Error state: icons, indicators, fills, and text on Surface and Surface Elevated."
+    },
+    "info": {
+      "$value": "{color.blue.690}",
+      "$description": "Information state: icons, indicators, fills, and text on Surface and Surface Elevated."
+    },
+    "text-secondary-aa": {
+      "$value": "{color.text-secondary}",
+      "$description": "Baseline Text Secondary already meets 4.5:1 on every Soft Black surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "text-tertiary-aa": {
+      "$value": "{color.soft-black.613}",
+      "$description": "Text Tertiary meeting 4.5:1 on every surface (baseline is 3.97:1 on Surface Elevated).",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "border-aa": {
+      "$value": "{color.soft-black.496}",
+      "$description": "Boundary color for interactive controls: ≥ 3:1 against every surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "success-aa": {
+      "$value": "{color.success}",
+      "$description": "Baseline already meets 4.5:1 on every Soft Black surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "warning-aa": {
+      "$value": "{color.warning}",
+      "$description": "Baseline already meets 4.5:1 on every Soft Black surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "error-aa": {
+      "$value": "{color.error}",
+      "$description": "Baseline already meets 4.5:1 on every Soft Black surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "info-aa": {
+      "$value": "{color.info}",
+      "$description": "Baseline already meets 4.5:1 on every Soft Black surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "focus": {
+      "$value": "{color.text-primary}",
+      "$description": "Focus ring. ≥ 11.6:1 against every surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "surface-inverse": {
+      "$value": "{color.text-primary}",
+      "$description": "Monochrome emphasis fill: primary buttons, checked controls, tooltips.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "text-inverse": {
+      "$value": "{color.background}",
+      "$description": "Text and glyphs on surface-inverse and on semantic fills.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "fill-hover": {
+      "$value": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "alpha": 0.06, "hex": "#ECECE8"},
+      "$description": "State layer composited over any surface on hover.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "fill-pressed": {
+      "$value": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "alpha": 0.1, "hex": "#ECECE8"},
+      "$description": "State layer composited over any surface while pressed.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "scrim": {
+      "$value": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.56, "hex": "#060708"},
+      "$description": "Modal backdrop behind D4 surfaces.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "light": {
+    "$description": "Ambient Lighting: one coherent environment. Light arrives broadly from above the screen plane.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "ambient": {
+      "$type": "color",
+      "$value": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "alpha": 0.04, "hex": "#ECECE8"},
+      "$description": "Ambient illumination tint: the lit (upper) side of a surface."
+    },
+    "diffuse": {
+      "$type": "gradient",
+      "$value": [
+        {"color": "{light.ambient}", "position": 0},
+        {
+          "color": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "alpha": 0, "hex": "#ECECE8"},
+          "position": 0.5
+        },
+        {
+          "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.12, "hex": "#060708"},
+          "position": 1
+        }
+      ],
+      "$description": "Diffuse falloff across a surface: lit top, neutral middle, gently shaded bottom. Applied top to bottom."
+    },
+    "edge": {
+      "$type": "color",
+      "$value": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "alpha": 0.07, "hex": "#ECECE8"},
+      "$description": "Edge highlight on surface and elevated fills."
+    },
+    "edge-inverse": {
+      "$type": "color",
+      "$value": {"colorSpace": "srgb", "components": [1.0, 1.0, 1.0], "alpha": 0.55, "hex": "#FFFFFF"},
+      "$description": "Edge highlight on surface-inverse fills."
+    },
+    "occlusion": {
+      "$type": "color",
+      "$value": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.3, "hex": "#060708"},
+      "$description": "Contact occlusion inside edges and recesses."
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "$description": "Shadow layers. Colors use the theme's shadow ink at partial alpha.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "contact": {
+      "$value": {
+        "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.2, "hex": "#060708"},
+        "offsetX": {"value": 0, "unit": "px"},
+        "offsetY": "{elevation.contact.offset}",
+        "blur": "{elevation.contact.blur}",
+        "spread": {"value": 0, "unit": "px"}
+      },
+      "$description": "Contact shadow: tight occlusion where a resting surface meets the plane."
+    },
+    "ambient": {
+      "$value": {
+        "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.24, "hex": "#060708"},
+        "offsetX": {"value": 0, "unit": "px"},
+        "offsetY": "{elevation.2.offset}",
+        "blur": "{elevation.2.blur}",
+        "spread": {"value": 0, "unit": "px"}
+      },
+      "$description": "Ambient shadow: broad, soft occlusion around a raised body."
+    },
+    "floating": {
+      "$value": {
+        "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.32, "hex": "#060708"},
+        "offsetX": {"value": 0, "unit": "px"},
+        "offsetY": "{elevation.3.offset}",
+        "blur": "{elevation.3.blur}",
+        "spread": {"value": 0, "unit": "px"}
+      },
+      "$description": "Floating shadow: separation between a detached surface and the plane."
+    },
+    "inset": {
+      "$value": {
+        "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.4, "hex": "#060708"},
+        "offsetX": {"value": 0, "unit": "px"},
+        "offsetY": "{elevation.contact.offset}",
+        "blur": "{elevation.contact.blur}",
+        "spread": {"value": 0, "unit": "px"},
+        "inset": true
+      },
+      "$description": "Inner occlusion of recessed (inset) regions.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "depth": {
+    "$type": "shadow",
+    "$description": "Depth hierarchy D0–D4: complete shadow stacks. Pair with a bevel and a surface fill; never rely on shadow alone.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "0": {
+      "$value": {
+        "color": {"colorSpace": "srgb", "components": [0.0, 0.0, 0.0], "alpha": 0, "hex": "#000000"},
+        "offsetX": {"value": 0, "unit": "px"},
+        "offsetY": {"value": 0, "unit": "px"},
+        "blur": {"value": 0, "unit": "px"},
+        "spread": {"value": 0, "unit": "px"}
+      },
+      "$description": "D0 Foundation — no shadow."
+    },
+    "1": {
+      "$value": [
+        "{shadow.contact}",
+        {
+          "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.12, "hex": "#060708"},
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": "{elevation.1.offset}",
+          "blur": "{elevation.1.blur}",
+          "spread": {"value": 0, "unit": "px"}
+        }
+      ],
+      "$description": "D1 Integrated."
+    },
+    "2": {"$value": ["{shadow.contact}", "{shadow.ambient}"], "$description": "D2 Raised."},
+    "3": {
+      "$value": [
+        {
+          "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.2, "hex": "#060708"},
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": "{elevation.3.near-offset}",
+          "blur": "{elevation.3.near-blur}",
+          "spread": {"value": 0, "unit": "px"}
+        },
+        "{shadow.floating}"
+      ],
+      "$description": "D3 Floating."
+    },
+    "4": {
+      "$value": [
+        {
+          "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.28, "hex": "#060708"},
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": "{elevation.4.near-offset}",
+          "blur": "{elevation.4.near-blur}",
+          "spread": {"value": 0, "unit": "px"}
+        },
+        {
+          "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.44, "hex": "#060708"},
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": "{elevation.4.offset}",
+          "blur": "{elevation.4.blur}",
+          "spread": {"value": 0, "unit": "px"}
+        }
+      ],
+      "$description": "D4 Elevated."
+    },
+    "hover": {
+      "$description": "Hover elevation: half a level up. Hover never turns a resting surface into a floating one.",
+      "$extensions": {"carbon": {"status": "proposed"}},
+      "1": {
+        "$value": [
+          "{shadow.contact}",
+          {
+            "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.18, "hex": "#060708"},
+            "offsetX": {"value": 0, "unit": "px"},
+            "offsetY": "{elevation.hover-1.offset}",
+            "blur": "{elevation.hover-1.blur}",
+            "spread": {"value": 0, "unit": "px"}
+          }
+        ],
+        "$description": "D1 surface on hover."
+      },
+      "2": {
+        "$value": [
+          "{shadow.contact}",
+          {
+            "color": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.28, "hex": "#060708"},
+            "offsetX": {"value": 0, "unit": "px"},
+            "offsetY": "{elevation.hover-2.offset}",
+            "blur": "{elevation.hover-2.blur}",
+            "spread": {"value": 0, "unit": "px"}
+          }
+        ],
+        "$description": "D2 surface on hover."
+      }
+    },
+    "pressed": {
+      "$value": "{shadow.contact}",
+      "$description": "Resting surface while pressed: pushed down onto the plane, contact shadow only.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "material": {
+    "$type": "color",
+    "$description": "Theme-specific Hybrid Material colors.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "composite": {
+      "weave-shade": {
+        "$value": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "alpha": 0.28, "hex": "#060708"},
+        "$description": "Shaded tows of the Carbon Composite twill."
+      },
+      "weave-highlight": {
+        "$value": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "alpha": 0.035, "hex": "#ECECE8"},
+        "$description": "Lit tows of the Carbon Composite twill."
+      }
+    }
+  }
+}

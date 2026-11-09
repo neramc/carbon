@@ -1,0 +1,525 @@
+{
+  "$description": "CARBON theme-agnostic semantic tokens: purpose-based values that do not change between Soft White and Soft Black. Values that reference theme tokens resolve against the active theme file.",
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "$extensions": {"carbon": {"status": "proposed"}},
+      "sans": {
+        "$value": [
+          "Inter",
+          "Pretendard Variable",
+          "Pretendard",
+          "Noto Sans KR",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI Variable Text",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif"
+        ],
+        "$description": "Default UI stack for Web and cross-platform products. Native platforms substitute the platform font (see typography.md)."
+      },
+      "mono": {
+        "$value": ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Cascadia Mono", "Consolas", "Menlo", "monospace"],
+        "$description": "Monospace stack."
+      }
+    }
+  },
+  "type": {
+    "$type": "typography",
+    "$description": "Typography styles. Sizes and weights are official; line heights and letter spacing are proposed.",
+    "display": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.40}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": 1.2,
+        "letterSpacing": {"value": -0.8, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "h1": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.32}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": 1.25,
+        "letterSpacing": {"value": -0.64, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "h2": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.24}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": 1.3333,
+        "letterSpacing": {"value": -0.36, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "h3": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.20}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": 1.4,
+        "letterSpacing": {"value": -0.2, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "title": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": 1.5,
+        "letterSpacing": {"value": -0.16, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "body-large": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.5,
+        "letterSpacing": {"value": -0.16, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "body": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.14}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.4286,
+        "letterSpacing": {"value": -0.07, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "caption": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.12}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.3333,
+        "letterSpacing": {"value": 0, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"]}}
+    },
+    "overline": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.11}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": 1.4545,
+        "letterSpacing": {"value": 0.66, "unit": "px"}
+      },
+      "$extensions": {"carbon": {"proposedFields": ["lineHeight", "letterSpacing"], "textTransform": "uppercase"}}
+    },
+    "label": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.14}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": 1.4286,
+        "letterSpacing": {"value": 0, "unit": "px"}
+      },
+      "$description": "Control labels, menu items, navigation items, button text.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "label-small": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.12}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": 1.3333,
+        "letterSpacing": {"value": 0, "unit": "px"}
+      },
+      "$description": "Small control labels, tags, compact table headers.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "code": {
+      "$value": {
+        "fontFamily": "{font.family.mono}",
+        "fontSize": "{font.size.13}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.5385,
+        "letterSpacing": {"value": 0, "unit": "px"}
+      },
+      "$description": "Inline and block code.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "inset": {
+    "$type": "dimension",
+    "$description": "Padding inside a surface or control. Values come from the official spacing scale.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "tight": {"$value": "{space.1}", "$description": "4px — clusters of controls: menus, floating toolbars, segmented tracks."},
+    "compact": {
+      "$value": "{space.2}",
+      "$description": "8px — compact containers, tooltips, integrated toolbars, small-button padding."
+    },
+    "control-x": {"$value": "{space.3}", "$description": "12px — horizontal padding of buttons and text inputs."},
+    "default": {"$value": "{space.4}", "$description": "16px — cards, panels, popovers."},
+    "comfortable": {"$value": "{space.6}", "$description": "24px — dialogs, comfortable cards."},
+    "spacious": {"$value": "{space.8}", "$description": "32px — page-level content regions and empty states."}
+  },
+  "gap": {
+    "$type": "dimension",
+    "$description": "Space between sibling elements.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "tight": {"$value": "{space.1}", "$description": "4px — label to helper text, stacked metadata."},
+    "inline": {"$value": "{space.2}", "$description": "8px — icon to label, adjacent related controls."},
+    "content": {"$value": "{space.3}", "$description": "12px — content elements inside a card or panel."},
+    "group": {"$value": "{space.4}", "$description": "16px — between groups of controls or fields."},
+    "section": {"$value": "{space.6}", "$description": "24px — between sections of a surface."},
+    "section-large": {"$value": "{space.8}", "$description": "32px — between major sections of a page."}
+  },
+  "seam": {
+    "$type": "dimension",
+    "$description": "The consistent gap between adjacent integrated surfaces, through which the foundation shows. See docs/spatial/composition.md.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "compact": {"$value": "{space.1}"},
+    "default": {"$value": "{space.2}"},
+    "comfortable": {"$value": "{space.3}"}
+  },
+  "radius": {
+    "$type": "dimension",
+    "$description": "Semantic component radii. Values marked official come from the CARBON component radius table.",
+    "indicator": {
+      "$value": "{radius.xs}",
+      "$description": "4px — glyph-scale indicators ≤ 20px (checkbox).",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "control-small": {
+      "$value": {"value": 6, "unit": "px"},
+      "$description": "6px — small controls 20–28px tall: small buttons, chips, segmented items. Intermediate value."
+    },
+    "control": {"$value": "{radius.sm}", "$description": "8px — buttons and inputs."},
+    "tooltip": {"$value": "{radius.sm}", "$description": "8px — tooltips.", "$extensions": {"carbon": {"status": "proposed"}}},
+    "card": {"$value": "{radius.md}", "$description": "12px — cards."},
+    "menu": {
+      "$value": "{radius.md}",
+      "$description": "12px — menus and dropdowns (concentric: item 8px + inset 4px).",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "toolbar-floating": {
+      "$value": "{radius.md}",
+      "$description": "12px — floating toolbars (concentric: button 8px + inset 4px).",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "panel": {"$value": {"value": 14, "unit": "px"}, "$description": "14px — panels. Intermediate value."},
+    "dialog": {"$value": "{radius.lg}", "$description": "16px — dialogs."},
+    "popover": {"$value": "{radius.lg}", "$description": "16px — popovers.", "$extensions": {"carbon": {"status": "proposed"}}},
+    "container": {"$value": "{radius.xl}", "$description": "20px — large containers."},
+    "floating": {
+      "$value": "{radius.xl}",
+      "$description": "20px — large floating surfaces: floating panels, palettes, inspectors, sheets."
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "$description": "Component and target sizes.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "control": {
+      "small": {"$value": {"value": 24, "unit": "px"}},
+      "medium": {"$value": {"value": 32, "unit": "px"}},
+      "large": {"$value": {"value": 40, "unit": "px"}}
+    },
+    "target": {
+      "minimum": {
+        "$value": {"value": 24, "unit": "px"},
+        "$description": "WCAG 2.2 SC 2.5.8 minimum. Every pointer target meets this."
+      },
+      "pointer": {"$value": {"value": 32, "unit": "px"}, "$description": "Recommended for pointer-first desktop UI."},
+      "touch": {
+        "$value": {"value": 44, "unit": "px"},
+        "$description": "Recommended for touch-first UI. Android uses 48dp (platform guideline)."
+      }
+    },
+    "icon": {
+      "small": {"$value": {"value": 16, "unit": "px"}},
+      "medium": {"$value": {"value": 20, "unit": "px"}},
+      "large": {"$value": {"value": 24, "unit": "px"}}
+    },
+    "header": {"$value": {"value": 48, "unit": "px"}, "$description": "Panel headers and integrated toolbars."}
+  },
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "$value": {"value": 1, "unit": "px"},
+      "$description": "Structural edge width for all bordered surfaces and controls.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "focus": {
+    "$type": "dimension",
+    "$description": "Focus indicator geometry. Color is color.focus.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "width": {"$value": {"value": 2, "unit": "px"}},
+    "offset": {"$value": {"value": 2, "unit": "px"}, "$description": "Gap between the component edge and the focus ring."}
+  },
+  "indicator": {
+    "$type": "dimension",
+    "$description": "Selection indicator bar used by navigation and lists.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "thickness": {"$value": {"value": 3, "unit": "px"}},
+    "length": {"$value": {"value": 16, "unit": "px"}}
+  },
+  "lift": {
+    "$type": "dimension",
+    "$description": "Positional response to interaction (vertical translation; positive is downward).",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "hover": {
+      "$value": {"value": -1, "unit": "px"},
+      "$description": "Optional for controls only. Never applied to cards or panels."
+    },
+    "pressed": {"$value": {"value": 1, "unit": "px"}, "$description": "Downward movement while pressed."}
+  },
+  "motion": {
+    "$type": "transition",
+    "$description": "Transitions. Durations are initial reference values; easing is proposed.",
+    "$extensions": {"carbon": {"status": "reference"}},
+    "hover": {
+      "$value": {"duration": "{duration.160}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.standard}"},
+      "$description": "Hover in and out.",
+      "$extensions": {"carbon": {"proposedFields": ["timingFunction"]}}
+    },
+    "press": {
+      "$value": {"duration": "{duration.90}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.standard}"},
+      "$description": "Press and release.",
+      "$extensions": {"carbon": {"proposedFields": ["timingFunction"]}}
+    },
+    "selection": {
+      "$value": {"duration": "{duration.180}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.standard}"},
+      "$description": "Selection changes.",
+      "$extensions": {"carbon": {"proposedFields": ["timingFunction"]}}
+    },
+    "elevation": {
+      "$value": {"duration": "{duration.200}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.standard}"},
+      "$description": "Depth changes (shadow and lift).",
+      "$extensions": {"carbon": {"proposedFields": ["timingFunction"]}}
+    },
+    "surface": {
+      "$value": {"duration": "{duration.220}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.standard}"},
+      "$description": "Surface tone, size and layout transitions.",
+      "$extensions": {"carbon": {"proposedFields": ["timingFunction"]}}
+    },
+    "overlay-enter": {
+      "$value": {"duration": "{duration.240}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.enter}"},
+      "$description": "Overlay entrance.",
+      "$extensions": {"carbon": {"proposedFields": ["timingFunction"]}}
+    },
+    "overlay-exit": {
+      "$value": {"duration": "{duration.180}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.exit}"},
+      "$description": "Overlay exit (75% of entrance).",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "focus": {
+      "$value": {"duration": "{duration.0}", "delay": {"value": 0, "unit": "ms"}, "timingFunction": "{easing.linear}"},
+      "$description": "Focus indicators appear instantly.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "layer": {
+    "$type": "number",
+    "$description": "Base stacking strata. An overlay opened from within a higher stratum stacks above its opener.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "base": {"$value": 0},
+    "sticky": {"$value": 100},
+    "floating": {"$value": 1000},
+    "overlay": {"$value": 2000},
+    "tooltip": {"$value": 3000}
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Minimum window widths of the window size classes. Compact is anything narrower than medium.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "medium": {"$value": {"value": 600, "unit": "px"}},
+    "expanded": {"$value": {"value": 1024, "unit": "px"}},
+    "large": {"$value": {"value": 1440, "unit": "px"}}
+  },
+  "layout": {
+    "$description": "Responsive page structure per window size class.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "margin": {
+      "$type": "dimension",
+      "compact": {"$value": "{space.4}"},
+      "medium": {"$value": "{space.6}"},
+      "expanded": {"$value": "{space.6}"},
+      "large": {"$value": "{space.8}"}
+    },
+    "gutter": {
+      "$type": "dimension",
+      "compact": {"$value": "{space.4}"},
+      "medium": {"$value": "{space.4}"},
+      "expanded": {"$value": "{space.6}"},
+      "large": {"$value": "{space.6}"}
+    },
+    "columns": {
+      "$type": "number",
+      "compact": {"$value": 4},
+      "medium": {"$value": 8},
+      "expanded": {"$value": 12},
+      "large": {"$value": 12}
+    }
+  },
+  "bevel": {
+    "$type": "shadow",
+    "$description": "Bevel system B0–B3: inner edge treatments that reveal surface curvature. Colors resolve from the active theme's light tokens.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "0": {
+      "$value": {
+        "color": {"colorSpace": "srgb", "components": [0.0, 0.0, 0.0], "alpha": 0, "hex": "#000000"},
+        "offsetX": {"value": 0, "unit": "px"},
+        "offsetY": {"value": 0, "unit": "px"},
+        "blur": {"value": 0, "unit": "px"},
+        "spread": {"value": 0, "unit": "px"}
+      },
+      "$description": "B0 — flat edge."
+    },
+    "1": {
+      "$value": [
+        {
+          "color": "{light.edge}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": 1, "unit": "px"},
+          "blur": {"value": 0, "unit": "px"},
+          "spread": {"value": 0, "unit": "px"},
+          "inset": true
+        }
+      ],
+      "$description": "B1 — subtle edge: a single top highlight. Small controls and general-purpose components."
+    },
+    "2": {
+      "$value": [
+        {
+          "color": "{light.edge}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": 1, "unit": "px"},
+          "blur": {"value": 0, "unit": "px"},
+          "spread": {"value": 0, "unit": "px"},
+          "inset": true
+        },
+        {
+          "color": "{light.occlusion}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": -1, "unit": "px"},
+          "blur": {"value": 0, "unit": "px"},
+          "spread": {"value": 0, "unit": "px"},
+          "inset": true
+        }
+      ],
+      "$description": "B2 — soft bevel: top highlight and bottom shade. Preferred for prominent spatial surfaces."
+    },
+    "3": {
+      "$value": [
+        {
+          "color": "{light.edge}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": 1, "unit": "px"},
+          "blur": {"value": 0, "unit": "px"},
+          "spread": {"value": 0, "unit": "px"},
+          "inset": true
+        },
+        {
+          "color": "{light.edge}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": 4, "unit": "px"},
+          "blur": {"value": 8, "unit": "px"},
+          "spread": {"value": -4, "unit": "px"},
+          "inset": true
+        },
+        {
+          "color": "{light.occlusion}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": -1, "unit": "px"},
+          "blur": {"value": 0, "unit": "px"},
+          "spread": {"value": 0, "unit": "px"},
+          "inset": true
+        },
+        {
+          "color": "{light.occlusion}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": -4, "unit": "px"},
+          "blur": {"value": 8, "unit": "px"},
+          "spread": {"value": -4, "unit": "px"},
+          "inset": true
+        }
+      ],
+      "$description": "B3 — clearly perceptible curved transition. Reserved for tactile grips (switch and slider thumbs) and Carbon Composite brand surfaces."
+    }
+  },
+  "surface": {
+    "$description": "Spatial surface classes: fill, structural edge and shadow stack for each depth level.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "foundation": {
+      "$description": "D0 Foundation — application foundation and background.",
+      "fill": {"$type": "color", "$value": "{color.background}"},
+      "shadow": {"$type": "shadow", "$value": "{depth.0}"}
+    },
+    "integrated": {
+      "$description": "D1 Integrated — base surfaces and integrated regions.",
+      "fill": {"$type": "color", "$value": "{color.surface}"},
+      "edge": {"$type": "color", "$value": "{color.border}"},
+      "shadow": {"$type": "shadow", "$value": ["{bevel.1}", "{depth.1}"]}
+    },
+    "raised": {
+      "$description": "D2 Raised — cards and primary content panels.",
+      "fill": {"$type": "color", "$value": "{color.surface}"},
+      "edge": {"$type": "color", "$value": "{color.border}"},
+      "shadow": {"$type": "shadow", "$value": ["{bevel.2}", "{depth.2}"]}
+    },
+    "floating": {
+      "$description": "D3 Floating — toolbars, popovers, dropdowns.",
+      "fill": {"$type": "color", "$value": "{color.surface-elevated}"},
+      "edge": {"$type": "color", "$value": "{color.border}"},
+      "shadow": {"$type": "shadow", "$value": ["{bevel.2}", "{depth.3}"]}
+    },
+    "elevated": {
+      "$description": "D4 Elevated — dialogs and top-level overlays.",
+      "fill": {"$type": "color", "$value": "{color.surface-elevated}"},
+      "edge": {"$type": "color", "$value": "{color.border}"},
+      "shadow": {"$type": "shadow", "$value": ["{bevel.2}", "{depth.4}"]}
+    },
+    "inset": {
+      "$description": "Recessed regions carved into the surface they belong to: input wells, tracks, code blocks. Not a depth level.",
+      "fill": {"$type": "color", "$value": "{color.surface-inset}"},
+      "shadow": {"$type": "shadow", "$value": "{shadow.inset}"}
+    }
+  },
+  "material": {
+    "$description": "Hybrid Material parameters. Theme-specific material colors live in the theme files.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "ceramic": {
+      "$description": "Soft Ceramic — the primary general-purpose surface material.",
+      "sheen": {
+        "$type": "gradient",
+        "$value": "{light.diffuse}",
+        "$description": "Diffuse shading laid over Soft Ceramic surfaces."
+      },
+      "sheen-strength": {"$type": "number", "$value": 1, "$description": "Opacity multiplier for the sheen layer."},
+      "texture-opacity": {"$type": "number", "$value": 0, "$description": "Soft Ceramic has no texture."}
+    },
+    "composite": {
+      "$description": "Carbon Composite — structural material with a subtle twill microtexture.",
+      "sheen-strength": {"$type": "number", "$value": 0.6, "$description": "Lower sheen than ceramic: a low-gloss finish."},
+      "weave-pitch": {
+        "$type": "dimension",
+        "$value": {"value": 4, "unit": "px"},
+        "$description": "Width of one twill tow. The repeat is 2 × pitch."
+      },
+      "weave-angle": {"$type": "number", "$value": 45, "$description": "Twill angle in degrees."}
+    },
+    "hybrid": {
+      "$description": "Rules for combining the two materials.",
+      "composite-coverage-max": {
+        "$type": "number",
+        "$value": 0.15,
+        "$description": "Maximum share of visible interface area rendered in Carbon Composite in any one view."
+      }
+    }
+  }
+}
