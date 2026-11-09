@@ -1,0 +1,292 @@
+{
+  "$description": "CARBON component tokens: component-specific decisions expressed through semantic tokens. Theme-agnostic; they resolve against the active theme.",
+  "$extensions": {"carbon": {"status": "proposed"}},
+  "button": {
+    "radius": {"$type": "dimension", "$value": "{radius.control}", "$extensions": {"carbon": {"status": "official"}}},
+    "radius-small": {
+      "$type": "dimension",
+      "$value": "{radius.control-small}",
+      "$description": "Small (24px) buttons.",
+      "$extensions": {"carbon": {"status": "official"}}
+    },
+    "height": {
+      "$type": "dimension",
+      "small": {"$value": "{size.control.small}"},
+      "medium": {"$value": "{size.control.medium}"},
+      "large": {"$value": "{size.control.large}"}
+    },
+    "padding-x": {"$type": "dimension", "$value": "{inset.control-x}"},
+    "padding-x-small": {"$type": "dimension", "$value": "{inset.compact}"},
+    "gap": {"$type": "dimension", "$value": "{gap.inline}", "$description": "Icon to label."},
+    "font": {"$type": "typography", "$value": "{type.label}"},
+    "primary": {
+      "$description": "Monochrome emphasis. One primary button per view region.",
+      "fill": {"$type": "color", "$value": "{color.surface-inverse}"},
+      "label": {"$type": "color", "$value": "{color.text-inverse}"},
+      "shadow": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "{light.edge-inverse}",
+            "offsetX": {"value": 0, "unit": "px"},
+            "offsetY": {"value": 1, "unit": "px"},
+            "blur": {"value": 0, "unit": "px"},
+            "spread": {"value": 0, "unit": "px"},
+            "inset": true
+          },
+          "{depth.1}"
+        ]
+      },
+      "shadow-hover": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "{light.edge-inverse}",
+            "offsetX": {"value": 0, "unit": "px"},
+            "offsetY": {"value": 1, "unit": "px"},
+            "blur": {"value": 0, "unit": "px"},
+            "spread": {"value": 0, "unit": "px"},
+            "inset": true
+          },
+          "{depth.hover.1}"
+        ]
+      },
+      "shadow-pressed": {"$type": "shadow", "$value": "{depth.pressed}"}
+    },
+    "secondary": {
+      "$description": "Raised neutral tile.",
+      "fill": {"$type": "color", "$value": "{color.surface-elevated}"},
+      "label": {"$type": "color", "$value": "{color.text-primary}"},
+      "edge": {"$type": "color", "$value": "{color.border}"},
+      "shadow": {"$type": "shadow", "$value": ["{bevel.1}", "{depth.1}"]},
+      "shadow-hover": {"$type": "shadow", "$value": ["{bevel.1}", "{depth.hover.1}"]},
+      "shadow-pressed": {"$type": "shadow", "$value": "{depth.pressed}"}
+    },
+    "tertiary": {
+      "$description": "Flat at rest; responds with state layers only.",
+      "label": {"$type": "color", "$value": "{color.text-primary}"},
+      "fill-hover": {"$type": "color", "$value": "{color.fill-hover}"},
+      "fill-pressed": {"$type": "color", "$value": "{color.fill-pressed}"}
+    },
+    "destructive": {
+      "$description": "Irreversible or destructive actions.",
+      "fill": {"$type": "color", "$value": "{color.error}"},
+      "label": {"$type": "color", "$value": "{color.text-inverse}"},
+      "shadow": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "{light.edge-inverse}",
+            "offsetX": {"value": 0, "unit": "px"},
+            "offsetY": {"value": 1, "unit": "px"},
+            "blur": {"value": 0, "unit": "px"},
+            "spread": {"value": 0, "unit": "px"},
+            "inset": true
+          },
+          "{depth.1}"
+        ]
+      },
+      "shadow-hover": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "{light.edge-inverse}",
+            "offsetX": {"value": 0, "unit": "px"},
+            "offsetY": {"value": 1, "unit": "px"},
+            "blur": {"value": 0, "unit": "px"},
+            "spread": {"value": 0, "unit": "px"},
+            "inset": true
+          },
+          "{depth.hover.1}"
+        ]
+      },
+      "shadow-pressed": {"$type": "shadow", "$value": "{depth.pressed}"}
+    },
+    "disabled": {
+      "$description": "All variants when disabled: flat, no depth.",
+      "fill": {"$type": "color", "$value": "{color.surface-secondary}"},
+      "label": {"$type": "color", "$value": "{color.text-tertiary}"},
+      "shadow": {"$type": "shadow", "$value": "{depth.0}"}
+    }
+  },
+  "input": {
+    "$description": "Text fields, search fields and select triggers: inset wells.",
+    "radius": {"$type": "dimension", "$value": "{radius.control}", "$extensions": {"carbon": {"status": "official"}}},
+    "height": {"$type": "dimension", "$value": "{size.control.medium}"},
+    "padding-x": {"$type": "dimension", "$value": "{inset.control-x}"},
+    "fill": {"$type": "color", "$value": "{surface.inset.fill}"},
+    "edge": {"$type": "color", "$value": "{color.border}"},
+    "baseline": {
+      "$type": "color",
+      "$value": "{color.border-aa}",
+      "$description": "1px bottom edge that identifies the control (≥ 3:1)."
+    },
+    "shadow": {"$type": "shadow", "$value": "{surface.inset.shadow}"},
+    "text": {"$type": "color", "$value": "{color.text-primary}"},
+    "placeholder": {"$type": "color", "$value": "{color.text-secondary-aa}"},
+    "helper-text": {"$type": "color", "$value": "{color.text-secondary}"},
+    "edge-error": {"$type": "color", "$value": "{color.error}"},
+    "message-error": {"$type": "color", "$value": "{color.error-aa}"},
+    "fill-disabled": {"$type": "color", "$value": "{color.surface-secondary}"},
+    "text-disabled": {"$type": "color", "$value": "{color.text-tertiary}"}
+  },
+  "checkbox": {
+    "size": {"$type": "dimension", "$value": {"value": 20, "unit": "px"}},
+    "radius": {"$type": "dimension", "$value": "{radius.indicator}"},
+    "fill": {"$type": "color", "$value": "{color.surface-inset}"},
+    "edge": {"$type": "color", "$value": "{color.border-aa}"},
+    "shadow": {"$type": "shadow", "$value": "{shadow.inset}"},
+    "fill-checked": {"$type": "color", "$value": "{color.surface-inverse}"},
+    "mark": {"$type": "color", "$value": "{color.text-inverse}"},
+    "shadow-checked": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "color": "{light.edge-inverse}",
+          "offsetX": {"value": 0, "unit": "px"},
+          "offsetY": {"value": 1, "unit": "px"},
+          "blur": {"value": 0, "unit": "px"},
+          "spread": {"value": 0, "unit": "px"},
+          "inset": true
+        },
+        "{depth.1}"
+      ]
+    }
+  },
+  "radio": {
+    "size": {"$type": "dimension", "$value": {"value": 20, "unit": "px"}},
+    "radius": {"$type": "dimension", "$value": "{radius.full}"},
+    "dot-size": {"$type": "dimension", "$value": {"value": 8, "unit": "px"}},
+    "fill": {"$type": "color", "$value": "{color.surface-inset}"},
+    "edge": {"$type": "color", "$value": "{color.border-aa}"},
+    "fill-checked": {"$type": "color", "$value": "{color.surface-inverse}"},
+    "dot": {"$type": "color", "$value": "{color.text-inverse}"}
+  },
+  "switch": {
+    "track-width": {"$type": "dimension", "$value": {"value": 36, "unit": "px"}},
+    "track-height": {"$type": "dimension", "$value": {"value": 20, "unit": "px"}},
+    "thumb-size": {"$type": "dimension", "$value": {"value": 16, "unit": "px"}},
+    "track-fill": {"$type": "color", "$value": "{color.surface-inset}"},
+    "track-edge": {"$type": "color", "$value": "{color.border-aa}"},
+    "track-fill-on": {"$type": "color", "$value": "{color.surface-inverse}"},
+    "thumb-fill": {
+      "$type": "color",
+      "$value": "{color.text-secondary}",
+      "$description": "Off-state thumb: contrasts with the inset track."
+    },
+    "thumb-fill-on": {"$type": "color", "$value": "{color.surface-elevated}"},
+    "thumb-shadow": {"$type": "shadow", "$value": ["{bevel.3}", "{depth.1}"]}
+  },
+  "card": {
+    "$description": "Default D2 Raised surface.",
+    "radius": {"$type": "dimension", "$value": "{radius.card}", "$extensions": {"carbon": {"status": "official"}}},
+    "padding": {"$type": "dimension", "$value": "{inset.default}"},
+    "padding-comfortable": {"$type": "dimension", "$value": "{inset.comfortable}"},
+    "gap": {"$type": "dimension", "$value": "{gap.content}"},
+    "fill": {"$type": "color", "$value": "{surface.raised.fill}"},
+    "edge": {"$type": "color", "$value": "{surface.raised.edge}"},
+    "elevation": {"$type": "shadow", "$value": "{surface.raised.shadow}"},
+    "elevation-hover": {"$type": "shadow", "$value": ["{bevel.2}", "{depth.hover.2}"], "$description": "Interactive cards only."},
+    "elevation-pressed": {"$type": "shadow", "$value": ["{bevel.1}", "{depth.1}"], "$description": "Interactive cards only."}
+  },
+  "panel": {
+    "$description": "D1 Integrated surface with header and content.",
+    "radius": {"$type": "dimension", "$value": "{radius.panel}", "$extensions": {"carbon": {"status": "official"}}},
+    "padding": {"$type": "dimension", "$value": "{inset.default}"},
+    "header-height": {"$type": "dimension", "$value": "{size.header}"},
+    "fill": {"$type": "color", "$value": "{surface.integrated.fill}"},
+    "edge": {"$type": "color", "$value": "{surface.integrated.edge}"},
+    "elevation": {"$type": "shadow", "$value": "{surface.integrated.shadow}"},
+    "nested-fill": {"$type": "color", "$value": "{color.surface-secondary}", "$description": "Grouped regions inside a panel."}
+  },
+  "toolbar": {
+    "height": {"$type": "dimension", "$value": "{size.header}"},
+    "padding-x": {"$type": "dimension", "$value": "{inset.compact}"},
+    "gap": {"$type": "dimension", "$value": "{gap.inline}"},
+    "group-gap": {"$type": "dimension", "$value": "{gap.group}"},
+    "floating": {
+      "$description": "D3 floating toolbar: only when it overlays content.",
+      "radius": {"$type": "dimension", "$value": "{radius.toolbar-floating}"},
+      "padding": {"$type": "dimension", "$value": "{inset.tight}"},
+      "surface": {"$type": "color", "$value": "{surface.floating.fill}"},
+      "edge": {"$type": "color", "$value": "{surface.floating.edge}"},
+      "elevation": {"$type": "shadow", "$value": "{surface.floating.shadow}"}
+    }
+  },
+  "menu": {
+    "$description": "Dropdowns, context menus and select lists (D3).",
+    "radius": {"$type": "dimension", "$value": "{radius.menu}"},
+    "padding": {"$type": "dimension", "$value": "{inset.tight}"},
+    "offset": {"$type": "dimension", "$value": "{space.1}", "$description": "Distance from the anchor."},
+    "fill": {"$type": "color", "$value": "{surface.floating.fill}"},
+    "edge": {"$type": "color", "$value": "{surface.floating.edge}"},
+    "elevation": {"$type": "shadow", "$value": "{surface.floating.shadow}"},
+    "item-height": {"$type": "dimension", "$value": "{size.control.medium}"},
+    "item-radius": {"$type": "dimension", "$value": "{radius.control}"},
+    "item-padding-x": {"$type": "dimension", "$value": "{inset.compact}"},
+    "item-fill-hover": {"$type": "color", "$value": "{color.fill-hover}"}
+  },
+  "popover": {
+    "$description": "Rich transient content anchored to a trigger (D3).",
+    "radius": {"$type": "dimension", "$value": "{radius.popover}"},
+    "padding": {"$type": "dimension", "$value": "{inset.default}"},
+    "offset": {"$type": "dimension", "$value": "{space.2}"},
+    "fill": {"$type": "color", "$value": "{surface.floating.fill}"},
+    "edge": {"$type": "color", "$value": "{surface.floating.edge}"},
+    "elevation": {"$type": "shadow", "$value": "{surface.floating.shadow}"}
+  },
+  "tooltip": {
+    "radius": {"$type": "dimension", "$value": "{radius.tooltip}"},
+    "padding-x": {"$type": "dimension", "$value": "{inset.compact}"},
+    "padding-y": {"$type": "dimension", "$value": "{space.1}"},
+    "fill": {"$type": "color", "$value": "{color.surface-inverse}"},
+    "text": {"$type": "color", "$value": "{color.text-inverse}"},
+    "font": {"$type": "typography", "$value": "{type.caption}"},
+    "elevation": {"$type": "shadow", "$value": "{depth.3}"}
+  },
+  "dialog": {
+    "$description": "D4 Elevated modal surface.",
+    "radius": {"$type": "dimension", "$value": "{radius.dialog}", "$extensions": {"carbon": {"status": "official"}}},
+    "padding": {"$type": "dimension", "$value": "{inset.comfortable}"},
+    "gap": {"$type": "dimension", "$value": "{gap.group}"},
+    "fill": {"$type": "color", "$value": "{surface.elevated.fill}"},
+    "edge": {"$type": "color", "$value": "{surface.elevated.edge}"},
+    "shadow": {"$type": "shadow", "$value": "{surface.elevated.shadow}"},
+    "scrim": {"$type": "color", "$value": "{color.scrim}"},
+    "width": {
+      "$type": "dimension",
+      "small": {"$value": {"value": 400, "unit": "px"}},
+      "medium": {"$value": {"value": 560, "unit": "px"}},
+      "large": {"$value": {"value": 720, "unit": "px"}}
+    }
+  },
+  "nav": {
+    "$description": "Navigation items in sidebars, rails and tab bars.",
+    "item-height": {"$type": "dimension", "$value": "{size.control.medium}"},
+    "item-radius": {"$type": "dimension", "$value": "{radius.control}"},
+    "item-padding-x": {"$type": "dimension", "$value": "{inset.control-x}"},
+    "item-gap": {"$type": "dimension", "$value": "{gap.inline}"},
+    "item-fill-hover": {"$type": "color", "$value": "{color.fill-hover}"},
+    "item-fill-selected": {"$type": "color", "$value": "{color.surface-elevated}", "$description": "Selected items become raised tiles."},
+    "item-shadow-selected": {"$type": "shadow", "$value": ["{bevel.1}", "{depth.1}"]},
+    "indicator": {"$type": "color", "$value": "{color.text-primary}", "$description": "Selection indicator bar (non-color cue)."},
+    "sidebar-width": {"$type": "dimension", "$value": {"value": 240, "unit": "px"}},
+    "rail-width": {"$type": "dimension", "$value": {"value": 64, "unit": "px"}},
+    "bar-height": {
+      "$type": "dimension",
+      "$value": {"value": 56, "unit": "px"},
+      "$description": "Mobile bottom navigation bar, excluding the safe area."
+    }
+  },
+  "tabs": {
+    "$description": "Segmented tabs: an inset track with a raised selected tab.",
+    "track-fill": {"$type": "color", "$value": "{surface.inset.fill}"},
+    "track-shadow": {"$type": "shadow", "$value": "{surface.inset.shadow}"},
+    "track-radius": {"$type": "dimension", "$value": "{radius.md}", "$description": "Concentric: tab 8px + track inset 4px."},
+    "track-padding": {"$type": "dimension", "$value": "{inset.tight}"},
+    "tab-height": {"$type": "dimension", "$value": "{size.control.medium}"},
+    "tab-radius": {"$type": "dimension", "$value": "{radius.control}"},
+    "tab-fill-selected": {"$type": "color", "$value": "{color.surface-elevated}"},
+    "tab-shadow-selected": {"$type": "shadow", "$value": ["{bevel.1}", "{depth.1}"]}
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "$description": "CARBON primitive tokens: raw foundational values. Products must not consume primitives directly; use semantic or component tokens.",
+  "color": {
+    "$type": "color",
+    "soft-white": {
+      "$description": "Soft White palette: soft, neutral whites with restrained warmth. Step keys are CIELAB lightness (L*) multiplied by 10 and rounded, so a larger key is always a lighter color.",
+      "165": {
+        "$value": {"colorSpace": "srgb", "components": [0.1608, 0.1608, 0.1529], "hex": "#292927"},
+        "$description": "Soft White — Text Primary; also the Soft White shadow ink"
+      },
+      "434": {
+        "$value": {"colorSpace": "srgb", "components": [0.4039, 0.4039, 0.3765], "hex": "#676760"},
+        "$description": "Accessible variant of Text Secondary: minimum 4.55:1 on every Soft White surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "438": {
+        "$value": {"colorSpace": "srgb", "components": [0.4078, 0.4078, 0.3804], "hex": "#686861"},
+        "$description": "Soft White — Text Secondary"
+      },
+      "543": {
+        "$value": {"colorSpace": "srgb", "components": [0.5137, 0.5098, 0.4824], "hex": "#83827B"},
+        "$description": "Accessible variant: minimum 3.05:1 non-text contrast on every Soft White surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "601": {
+        "$value": {"colorSpace": "srgb", "components": [0.5725, 0.5686, 0.5412], "hex": "#92918A"},
+        "$description": "Soft White — Text Tertiary"
+      },
+      "809": {
+        "$value": {"colorSpace": "srgb", "components": [0.7922, 0.7882, 0.7608], "hex": "#CAC9C2"},
+        "$description": "Soft White — Border Strong"
+      },
+      "880": {
+        "$value": {"colorSpace": "srgb", "components": [0.8706, 0.8667, 0.8431], "hex": "#DEDDD7"},
+        "$description": "Soft White — Border"
+      },
+      "912": {
+        "$value": {"colorSpace": "srgb", "components": [0.9059, 0.902, 0.8824], "hex": "#E7E6E1"},
+        "$description": "Soft White — Surface Inset"
+      },
+      "937": {
+        "$value": {"colorSpace": "srgb", "components": [0.9333, 0.9294, 0.9137], "hex": "#EEEDE9"},
+        "$description": "Soft White — Surface Secondary"
+      },
+      "944": {
+        "$value": {"colorSpace": "srgb", "components": [0.9412, 0.9373, 0.9216], "hex": "#F0EFEB"},
+        "$description": "Soft White — Background"
+      },
+      "972": {
+        "$value": {"colorSpace": "srgb", "components": [0.9725, 0.9686, 0.9569], "hex": "#F8F7F4"},
+        "$description": "Soft White — Surface"
+      },
+      "983": {
+        "$value": {"colorSpace": "srgb", "components": [0.9843, 0.9804, 0.9686], "hex": "#FBFAF7"},
+        "$description": "Soft White — Surface Elevated"
+      }
+    },
+    "soft-black": {
+      "$description": "Soft Black palette: deep, comfortable charcoal. Step keys are CIELAB lightness (L*) multiplied by 10 and rounded, so a larger key is always a lighter color.",
+      "019": {
+        "$value": {"colorSpace": "srgb", "components": [0.0235, 0.0275, 0.0314], "hex": "#060708"},
+        "$description": "Soft Black shadow ink. Used only at partial alpha inside shadows; never as a surface fill",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "058": {
+        "$value": {"colorSpace": "srgb", "components": [0.0667, 0.0745, 0.0824], "hex": "#111315"},
+        "$description": "Soft Black — Surface Inset"
+      },
+      "076": {
+        "$value": {"colorSpace": "srgb", "components": [0.0824, 0.0902, 0.098], "hex": "#151719"},
+        "$description": "Soft Black — Background"
+      },
+      "115": {
+        "$value": {"colorSpace": "srgb", "components": [0.1098, 0.1216, 0.1294], "hex": "#1C1F21"},
+        "$description": "Soft Black — Surface"
+      },
+      "145": {
+        "$value": {"colorSpace": "srgb", "components": [0.1333, 0.1451, 0.1529], "hex": "#222527"},
+        "$description": "Soft Black — Surface Secondary"
+      },
+      "182": {
+        "$value": {"colorSpace": "srgb", "components": [0.1608, 0.1765, 0.1882], "hex": "#292D30"},
+        "$description": "Soft Black — Surface Elevated"
+      },
+      "232": {
+        "$value": {"colorSpace": "srgb", "components": [0.2039, 0.2196, 0.2275], "hex": "#34383A"},
+        "$description": "Soft Black — Border"
+      },
+      "328": {
+        "$value": {"colorSpace": "srgb", "components": [0.2863, 0.3059, 0.3137], "hex": "#494E50"},
+        "$description": "Soft Black — Border Strong"
+      },
+      "496": {
+        "$value": {"colorSpace": "srgb", "components": [0.4431, 0.4667, 0.4745], "hex": "#717779"},
+        "$description": "Accessible variant: minimum 3.05:1 non-text contrast on every Soft Black surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "571": {
+        "$value": {"colorSpace": "srgb", "components": [0.5216, 0.5412, 0.5451], "hex": "#858A8B"},
+        "$description": "Soft Black — Text Tertiary"
+      },
+      "613": {
+        "$value": {"colorSpace": "srgb", "components": [0.5647, 0.5843, 0.5882], "hex": "#909596"},
+        "$description": "Accessible variant of Text Tertiary: minimum 4.55:1 on every Soft Black surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "724": {
+        "$value": {"colorSpace": "srgb", "components": [0.6902, 0.698, 0.6902], "hex": "#B0B2B0"},
+        "$description": "Soft Black — Text Secondary"
+      },
+      "933": {
+        "$value": {"colorSpace": "srgb", "components": [0.9255, 0.9255, 0.9098], "hex": "#ECECE8"},
+        "$description": "Soft Black — Text Primary"
+      }
+    },
+    "green": {
+      "$description": "Functional green hue for semantic state colors. Step keys are CIELAB lightness (L*) multiplied by 10 and rounded, so a larger key is always a lighter color.",
+      "434": {
+        "$value": {"colorSpace": "srgb", "components": [0.1137, 0.4588, 0.2706], "hex": "#1D7545"},
+        "$description": "Success accessible variant for Soft White: minimum 4.55:1 as text on every surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "453": {
+        "$value": {"colorSpace": "srgb", "components": [0.1373, 0.4784, 0.2863], "hex": "#237A49"},
+        "$description": "Success — Soft White"
+      },
+      "720": {
+        "$value": {"colorSpace": "srgb", "components": [0.3294, 0.7725, 0.5412], "hex": "#54C58A"},
+        "$description": "Success — Soft Black"
+      }
+    },
+    "amber": {
+      "$description": "Functional amber hue for semantic state colors. Step keys are CIELAB lightness (L*) multiplied by 10 and rounded, so a larger key is always a lighter color.",
+      "434": {
+        "$value": {"colorSpace": "srgb", "components": [0.6118, 0.3294, 0.0], "hex": "#9C5400"},
+        "$description": "Warning accessible variant for Soft White: minimum 4.55:1 as text on every surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "469": {
+        "$value": {"colorSpace": "srgb", "components": [0.651, 0.3647, 0.0627], "hex": "#A65D10"},
+        "$description": "Warning — Soft White"
+      },
+      "772": {
+        "$value": {"colorSpace": "srgb", "components": [0.949, 0.702, 0.3686], "hex": "#F2B35E"},
+        "$description": "Warning — Soft Black"
+      }
+    },
+    "red": {
+      "$description": "Functional red hue for semantic state colors. Step keys are CIELAB lightness (L*) multiplied by 10 and rounded, so a larger key is always a lighter color.",
+      "433": {
+        "$value": {"colorSpace": "srgb", "components": [0.7412, 0.1961, 0.2], "hex": "#BD3233"},
+        "$description": "Error accessible variant for Soft White: minimum 4.55:1 as text on every surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "442": {
+        "$value": {"colorSpace": "srgb", "components": [0.7529, 0.2078, 0.2078], "hex": "#C03535"},
+        "$description": "Error — Soft White"
+      },
+      "643": {
+        "$value": {"colorSpace": "srgb", "components": [0.949, 0.4627, 0.4627], "hex": "#F27676"},
+        "$description": "Error — Soft Black"
+      }
+    },
+    "blue": {
+      "$description": "Functional blue hue for semantic state colors. Step keys are CIELAB lightness (L*) multiplied by 10 and rounded, so a larger key is always a lighter color.",
+      "432": {
+        "$value": {"colorSpace": "srgb", "components": [0.1882, 0.4, 0.6902], "hex": "#3066B0"},
+        "$description": "Information accessible variant for Soft White: minimum 4.55:1 as text on every surface",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "439": {
+        "$value": {"colorSpace": "srgb", "components": [0.1961, 0.4078, 0.698], "hex": "#3268B2"},
+        "$description": "Information — Soft White"
+      },
+      "690": {
+        "$value": {"colorSpace": "srgb", "components": [0.5098, 0.6627, 0.9412], "hex": "#82A9F0"},
+        "$description": "Information — Soft Black"
+      }
+    },
+    "white": {
+      "$value": {"colorSpace": "srgb", "components": [1.0, 1.0, 1.0], "hex": "#FFFFFF"},
+      "$description": "Pure white. Used only at partial alpha for edge highlights and diffuse light; never as an opaque surface.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "4px base spacing scale. Keys are multiples of the 4px base unit (space.4 = 16px).",
+    "1": {"$value": {"value": 4, "unit": "px"}},
+    "2": {"$value": {"value": 8, "unit": "px"}},
+    "3": {"$value": {"value": 12, "unit": "px"}},
+    "4": {"$value": {"value": 16, "unit": "px"}},
+    "5": {"$value": {"value": 20, "unit": "px"}},
+    "6": {"$value": {"value": 24, "unit": "px"}},
+    "8": {"$value": {"value": 32, "unit": "px"}},
+    "10": {"$value": {"value": 40, "unit": "px"}},
+    "12": {"$value": {"value": 48, "unit": "px"}},
+    "16": {"$value": {"value": 64, "unit": "px"}},
+    "20": {"$value": {"value": 80, "unit": "px"}}
+  },
+  "radius": {
+    "$type": "dimension",
+    "$description": "Rounded Minimalism radius scale.",
+    "none": {
+      "$value": {"value": 0, "unit": "px"},
+      "$description": "Square corners. Use only where a surface meets a platform edge (for example, a full-bleed region).",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "xs": {"$value": {"value": 4, "unit": "px"}},
+    "sm": {"$value": {"value": 8, "unit": "px"}},
+    "md": {"$value": {"value": 12, "unit": "px"}},
+    "lg": {"$value": {"value": 16, "unit": "px"}},
+    "xl": {"$value": {"value": 20, "unit": "px"}},
+    "2xl": {"$value": {"value": 28, "unit": "px"}},
+    "3xl": {"$value": {"value": 36, "unit": "px"}},
+    "full": {
+      "$value": {"value": 9999, "unit": "px"},
+      "$description": "Fully circular. Reserved for inherently circular elements (radio, switch track and thumb, avatar, status dot). Never for buttons, inputs or containers.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "$description": "Font families. Platform mapping is defined in docs/foundations/typography.md.",
+      "inter": {"$value": ["Inter"], "$description": "General-purpose, Linux, Web and cross-platform default."},
+      "segoe-ui-variable": {
+        "$value": ["Segoe UI Variable Text", "Segoe UI"],
+        "$description": "Windows. Optical sizes: Small ≤ 12px, Text 13–19px, Display ≥ 20px."
+      },
+      "sf-pro": {
+        "$value": ["SF Pro Text", "SF Pro", "system-ui"],
+        "$description": "macOS and iOS. Native code requests the system UI font through platform APIs instead of by name."
+      },
+      "pretendard": {"$value": ["Pretendard Variable", "Pretendard"], "$description": "Korean (preferred)."},
+      "noto-sans-kr": {"$value": ["Noto Sans KR"], "$description": "Korean (alternative)."},
+      "jetbrains-mono": {"$value": ["JetBrains Mono"], "$description": "Monospace: code, logs, identifiers."}
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": {"$value": 400},
+      "medium": {"$value": 500},
+      "semibold": {"$value": 600},
+      "bold": {
+        "$value": 700,
+        "$description": "Reserved. Not used by the official type scale; available for numeric emphasis and user-generated content.",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      }
+    },
+    "size": {
+      "$type": "dimension",
+      "$description": "Font sizes in density-independent pixels (CSS px, Apple pt, Android sp, Windows epx).",
+      "11": {"$value": {"value": 11, "unit": "px"}},
+      "12": {"$value": {"value": 12, "unit": "px"}},
+      "13": {
+        "$value": {"value": 13, "unit": "px"},
+        "$description": "Code size. JetBrains Mono at 13px optically matches Inter at 14px.",
+        "$extensions": {"carbon": {"status": "proposed"}}
+      },
+      "14": {"$value": {"value": 14, "unit": "px"}},
+      "16": {"$value": {"value": 16, "unit": "px"}},
+      "20": {"$value": {"value": 20, "unit": "px"}},
+      "24": {"$value": {"value": 24, "unit": "px"}},
+      "32": {"$value": {"value": 32, "unit": "px"}},
+      "40": {"$value": {"value": 40, "unit": "px"}}
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "$description": "Motion durations. Keys are milliseconds.",
+    "$extensions": {"carbon": {"status": "reference"}},
+    "0": {
+      "$value": {"value": 0, "unit": "ms"},
+      "$description": "Instant. Used for focus indication and reduced-motion substitutes.",
+      "$extensions": {"carbon": {"status": "proposed"}}
+    },
+    "90": {"$value": {"value": 90, "unit": "ms"}},
+    "160": {"$value": {"value": 160, "unit": "ms"}},
+    "180": {"$value": {"value": 180, "unit": "ms"}},
+    "200": {"$value": {"value": 200, "unit": "ms"}},
+    "220": {"$value": {"value": 220, "unit": "ms"}},
+    "240": {"$value": {"value": 240, "unit": "ms"}}
+  },
+  "easing": {
+    "$type": "cubicBezier",
+    "$description": "Easing curves. No curve overshoots (all y values stay within 0–1), so Carbon motion never bounces.",
+    "$extensions": {"carbon": {"status": "proposed"}},
+    "standard": {
+      "$value": [0.2, 0, 0, 1],
+      "$description": "In-place changes: hover, press, selection, elevation, surface transitions."
+    },
+    "enter": {"$value": [0, 0, 0.2, 1], "$description": "Elements arriving on screen (decelerate)."},
+    "exit": {"$value": [0.4, 0, 1, 1], "$description": "Elements leaving the screen (accelerate)."},
+    "linear": {"$value": [0, 0, 1, 1], "$description": "Continuous progress and opacity-only crossfades."}
+  },
+  "elevation": {
+    "$type": "dimension",
+    "$description": "Shadow geometry for the D0–D4 depth hierarchy. 'offset' is the vertical shadow offset (light comes from above; there is never a horizontal offset). Opacity is theme-specific and lives in the theme files.",
+    "$extensions": {"carbon": {"status": "reference"}},
+    "contact": {
+      "$description": "Tight contact occlusion where a resting surface meets the plane beneath it.",
+      "$extensions": {"carbon": {"status": "proposed"}},
+      "offset": {"$value": {"value": 1, "unit": "px"}},
+      "blur": {"$value": {"value": 2, "unit": "px"}}
+    },
+    "1": {
+      "$description": "D1 Integrated — key layer.",
+      "offset": {"$value": {"value": 2, "unit": "px"}},
+      "blur": {"$value": {"value": 6, "unit": "px"}}
+    },
+    "2": {
+      "$description": "D2 Raised — key (ambient) layer.",
+      "offset": {"$value": {"value": 4, "unit": "px"}},
+      "blur": {"$value": {"value": 16, "unit": "px"}}
+    },
+    "3": {
+      "$description": "D3 Floating — near (penumbra) and key (floating) layers.",
+      "near-offset": {"$value": {"value": 2, "unit": "px"}, "$extensions": {"carbon": {"status": "proposed"}}},
+      "near-blur": {"$value": {"value": 6, "unit": "px"}, "$extensions": {"carbon": {"status": "proposed"}}},
+      "offset": {"$value": {"value": 10, "unit": "px"}},
+      "blur": {"$value": {"value": 30, "unit": "px"}}
+    },
+    "4": {
+      "$description": "D4 Elevated — near (penumbra) and key layers.",
+      "near-offset": {"$value": {"value": 4, "unit": "px"}, "$extensions": {"carbon": {"status": "proposed"}}},
+      "near-blur": {"$value": {"value": 12, "unit": "px"}, "$extensions": {"carbon": {"status": "proposed"}}},
+      "offset": {"$value": {"value": 16, "unit": "px"}},
+      "blur": {"$value": {"value": 48, "unit": "px"}}
+    },
+    "hover-1": {
+      "$description": "Hover state of a D1 surface: halfway between D1 and D2.",
+      "$extensions": {"carbon": {"status": "proposed"}},
+      "offset": {"$value": {"value": 3, "unit": "px"}},
+      "blur": {"$value": {"value": 10, "unit": "px"}}
+    },
+    "hover-2": {
+      "$description": "Hover state of a D2 surface: halfway between D2 and D3. Never crosses into floating.",
+      "$extensions": {"carbon": {"status": "proposed"}},
+      "offset": {"$value": {"value": 6, "unit": "px"}},
+      "blur": {"$value": {"value": 22, "unit": "px"}}
+    }
+  }
+}
